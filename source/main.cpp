@@ -55,8 +55,8 @@ int playerInput(Player& currPlayer,Card center);
 int main() {
 int choice;
 do{
-cout << "1 - Read File Contents" << endl;
-cout << "2 - Quit" << endl; 
+cout << "1 - Read Contents" << endl;
+cout << "2 - Start Uno Game" << endl; 
 cin >> choice;
 cin.ignore();
 
@@ -65,7 +65,7 @@ if(choice==1)
 string filename;
 ifstream infile; 
 do{
-    cout << "ENTER FILE NAME: ";
+    cout << "TYPE FILE NAME: ";
     getline(cin,filename);
     infile.open(filename);
 }while(infile.fail());
