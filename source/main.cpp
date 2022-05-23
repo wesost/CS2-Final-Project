@@ -1,3 +1,7 @@
+// Good Job!
+// No header comment (-2 pts)
+// Qian commented
+
 #include <iostream> 
 #include <random>
 #include <time.h>

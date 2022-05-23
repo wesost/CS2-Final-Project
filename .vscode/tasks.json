@@ -6,10 +6,10 @@
         {
             "label": "build project",
             "type": "shell",
-            "command": "g++",
+            "command": "C:/mingw-w64/mingw64/bin/g++.exe",
             "args": [
                 "-o",
-                "\"${workspaceFolder}\"/bin/main",
+                "\"${workspaceFolder}\"/bin/main.exe",
                 "-I",
                 "\"${workspaceFolder}\"/headers",
                 "-ggdb",
@@ -21,27 +21,26 @@
             },
             "problemMatcher": [],
             "options": {
-                "cwd": ""
+                "cwd": "C:/mingw-w64/mingw64/bin/"
             }
         },
         {
             "label": "build test project",
             "type": "shell",
-            "command": "g++",
+            "command": "C:/mingw-w64/mingw64/bin/g++.exe",
             "args": [
-                "-std=c++11",
                 "-o",
-                "\"${workspaceFolder}\"/bin/testmain",
+                "\"${workspaceFolder}\"/bin/testmain.exe\"",
                 "-I",
                 "\"${workspaceFolder}\"/headers",
                 "-I",
-                "/usr/local/lib/googletest/googletest/googletest/include",
+                "C:/googletest/googletest/include",
                 "-I",
-                "/usr/local/lib/googletest/googletest/googletest",
+                "C:/googletest/googletest",
                 "-ggdb",
                 "\"${workspaceFolder}\"/tests/*.cpp",
                 "\"${workspaceFolder}\"/source/*.cpp",
-                "/usr/local/lib/googletest/googletest/googletest/src/gtest-all.cc"
+                "C:/googletest/googletest/src/gtest-all.cc"
             ],
             "group": {
                 "kind": "build",
@@ -49,37 +48,19 @@
             },
             "problemMatcher": [],
             "options": {
-                "cwd": ""
+                "cwd": "C:/mingw-w64/mingw64/bin/"
             }
         },
         {
             "label": "run",
             "type": "shell",
-            "command": "./bin/main",
+            "command": "./bin/main.exe",
             "problemMatcher": []
         },
         {
             "label": "run tests",
             "type": "shell",
-            "command": "./bin/testmain",
-            "problemMatcher": []
-        },
-        {
-            "label": "run on windows cmd shell ",
-            "type": "shell",
-            "command": "\"${workspaceFolder}/bin/main\"",
-            "options": {
-                "cwd": "bin"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "run tests on windows cmd shell ",
-            "type": "shell",
-            "command": "\"${workspaceFolder}/bin/testmain\"",
-            "options": {
-                "cwd": "bin"
-            },
+            "command": "./bin/testmain.exe",
             "problemMatcher": []
         }
     ]
